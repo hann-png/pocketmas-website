@@ -23,7 +23,7 @@ const EventInfo = () => {
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Date</h3>
-              <p className="text-gray-600">27 August 2024</p>
+              <p className="text-gray-600">27 August 2025</p>
               <p className="text-sm text-gray-500">Malaysia Independence Day</p>
             </div>
 
@@ -32,8 +32,8 @@ const EventInfo = () => {
                 <Clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Time</h3>
-              <p className="text-gray-600">10:00 AM - 6:00 PM</p>
-              <p className="text-sm text-gray-500">8 hours of celebration</p>
+              <p className="text-gray-600">10:00 AM - 5:00 PM</p>
+              <p className="text-sm text-gray-500">7 hours of celebration</p>
             </div>
 
             <div className="text-center">

@@ -27,7 +27,10 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat home-hero-bg"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)'
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-transparent to-red-900/70" />
         
@@ -35,16 +38,14 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-red-600 rounded-2xl flex items-center justify-center">
-                <Star className="w-8 h-8 text-white" />
-              </div>
+              <img 
+                src="https://cdn.chatandbuild.com/users/687607293c9390e9ca560a44/pocketmaslogotr-1755799628792-290722501.png" 
+                alt="Pocket Mas Logo" 
+                className="h-20 md:h-24 w-auto object-contain"
+              />
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
-                POCKETMAS
-              </span>
-              <br />
               <span className="text-2xl md:text-4xl">Merdeka Day Specials</span>
             </h1>
             
