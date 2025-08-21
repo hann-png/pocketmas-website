@@ -141,11 +141,11 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Instagram className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-600">hello@pocketmas.my</p>
+                    <h3 className="font-semibold text-gray-800 mb-1">Instagram</h3>
+                    <p className="text-gray-600">@pocketmas_apu</p>
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -167,8 +167,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Event Location</h3>
-                    <p className="text-gray-600">Details shared with attendees</p>
-                    <p className="text-sm text-gray-500">Kuala Lumpur, Malaysia</p>
+                    <p className="text-gray-600">Asia Pacific University of Technology & Innovation (APU)</p>
+                    <p className="text-sm text-gray-500">University in Kuala Lumpur, Malaysia</p>
                   </div>
                 </div>
 
@@ -194,22 +194,10 @@ const Contact = () => {
               
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/pocketmas_apu/"
                   className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
                 >
                   <Instagram className="w-6 h-6 text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
-                >
-                  <Facebook className="w-6 h-6 text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-200"
-                >
-                  <Twitter className="w-6 h-6 text-white" />
                 </a>
               </div>
             </div>
@@ -220,7 +208,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-blue-800 mb-2">When is the event?</h3>
-                  <p className="text-blue-700 text-sm">27 August 2024, 10:00 AM - 6:00 PM</p>
+                  <p className="text-blue-700 text-sm">27 August 2025, 10:00 AM - 5:00 PM</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-blue-800 mb-2">Can I buy online?</h3>
@@ -228,11 +216,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-blue-800 mb-2">What payment methods do you accept?</h3>
-                  <p className="text-blue-700 text-sm">We accept cash and major credit/debit cards.</p>
+                  <p className="text-blue-700 text-sm">We accept cash and QR payments only.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-blue-800 mb-2">How does the DIY Art display work?</h3>
-                  <p className="text-blue-700 text-sm">Use our Scan & Display feature to showcase your artwork on large screens at the event.</p>
+                  <p className="text-blue-700 text-sm">Your drawn artwork will be scanned by us and showcased on the large screens at the event.</p>
                 </div>
               </div>
             </div>
