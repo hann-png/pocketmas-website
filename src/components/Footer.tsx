@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Star, Instagram, Facebook, Twitter, Mail } from 'lucide-react'
+import {SiInstagram, SiFacebook, SiX } from 'react-icons/si'
+import {Star, Mail} from "lucide-react"
 
 const Footer = () => {
   return (
@@ -21,16 +22,16 @@ const Footer = () => {
               Celebrating Malaysia's independence with exclusive handcrafted keychains, postcards, and DIY art collections. Join us for our special in-person event on 27 August.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
-                <Instagram className="w-5 h-5 text-gray-600" />
+              <a href="#" aria-label="Instagram" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
+                <SiInstagram className="w-5 h-5 text-gray-600" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
-                <Facebook className="w-5 h-5 text-gray-600" />
+              <a href="#" aria-label="Facebook" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
+                <SiFacebook className="w-5 h-5 text-gray-600" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
-                <Twitter className="w-5 h-5 text-gray-600" />
+              <a href="#" aria-label="Twitter" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
+                <SiX className="w-5 h-5 text-gray-600" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
+              <a href="#" aria-label="Email" className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-200">
                 <Mail className="w-5 h-5 text-gray-600" />
               </a>
             </div>

@@ -14,7 +14,7 @@ const CountdownBanner: React.FC<CountdownBannerProps> = ({ onClose }) => {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2024-08-27T10:00:00').getTime()
+    const targetDate = new Date('2025-08-27T10:00:00').getTime()
 
     const timer = setInterval(() => {
       const now = new Date().getTime()
@@ -63,9 +63,10 @@ const CountdownBanner: React.FC<CountdownBannerProps> = ({ onClose }) => {
           </div>
           <button
             onClick={onClose}
+            aria-label="Close"
             className="p-1 rounded-full hover:bg-white/20 transition-colors"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" aria-hidden="true"/>
           </button>
         </div>
       </div>

@@ -66,12 +66,16 @@ const EventInfo = () => {
             
             {/* Placeholder for map - in real app, you'd use Google Maps or similar */}
             <div className="w-full h-96 bg-gray-100/50 rounded-xl flex items-center justify-center mb-6">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 text-lg font-medium">Interactive Map</p>
-                <p className="text-gray-500">Exact location will be shared with registered attendees</p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1478338507923!2d101.69800137447041!3d3.055080653724771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1755778713323!5m2!1sen!2smy"
+              width="100%"
+              height="100%"
+              title="Event location map of Kuala Lumpur"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -79,17 +83,14 @@ const EventInfo = () => {
                 <ul className="space-y-2 text-gray-600">
                   <li>🚗 Ample parking available</li>
                   <li>🚌 Public transport accessible</li>
-                  <li>🚶‍♂️ Walking distance from main attractions</li>
-                  <li>♿ Wheelchair accessible venue</li>
+                  <li>🚶‍♂️ Walking distance from main entrance</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3">Nearby Landmarks</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">Other Attractions</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>📍 Central shopping district</li>
-                  <li>📍 Cultural heritage sites</li>
-                  <li>📍 Food courts and restaurants</li>
-                  <li>📍 Tourist information center</li>
+                  <li>📍 Food Stalls</li>
+                  <li>📍 Entertainment Zones</li>
                 </ul>
               </div>
             </div>
@@ -104,7 +105,7 @@ const EventInfo = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Exclusive Products</h3>
             <p className="text-gray-600">
-              Shop our complete collection of Merdeka-themed keychains, postcards, and DIY art kits available only at this special event.
+              Shop our complete collection of Merdeka-themed keychains and postcards that are available only at this special event.
             </p>
           </div>
 
@@ -139,64 +140,16 @@ const EventInfo = () => {
             </p>
             <p className="flex items-start">
               <span className="font-bold mr-2">💰</span>
-              <span><strong>Cash & Card Accepted:</strong> We accept both cash payments and major credit/debit cards for your convenience.</span>
+              <span><strong>Cash & Card Accepted:</strong> We accept only cash payments and QR code payments.</span>
             </p>
             <p className="flex items-start">
               <span className="font-bold mr-2">📱</span>
-              <span><strong>Bring Your Phone:</strong> Don't forget your smartphone to use our Scan & Display feature for DIY artworks!</span>
+              <span><strong>Bring Your Phone:</strong> Don't forget to take memorable pictures at the event and tag us!</span>
             </p>
           </div>
         </div>
 
-        {/* Schedule */}
-        <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-8 border border-white/30 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Event Schedule</h2>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-4 p-4 bg-white/30 rounded-xl">
-              <div className="w-20 text-center">
-                <div className="text-lg font-bold text-blue-600">10:00</div>
-                <div className="text-sm text-gray-600">AM</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800">Event Opens</h3>
-                <p className="text-gray-600">Welcome visitors, product showcase begins</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4 p-4 bg-white/30 rounded-xl">
-              <div className="w-20 text-center">
-                <div className="text-lg font-bold text-blue-600">12:00</div>
-                <div className="text-sm text-gray-600">PM</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800">DIY Art Workshop</h3>
-                <p className="text-gray-600">Interactive session for creating and displaying artworks</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4 p-4 bg-white/30 rounded-xl">
-              <div className="w-20 text-center">
-                <div className="text-lg font-bold text-blue-600">15:00</div>
-                <div className="text-sm text-gray-600">PM</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800">Merdeka Celebration</h3>
-                <p className="text-gray-600">Special patriotic activities and photo opportunities</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4 p-4 bg-white/30 rounded-xl">
-              <div className="w-20 text-center">
-                <div className="text-lg font-bold text-blue-600">18:00</div>
-                <div className="text-sm text-gray-600">PM</div>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-gray-800">Event Closes</h3>
-                <p className="text-gray-600">Final purchases and farewell</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Contact CTA */}
         <div className="text-center">
