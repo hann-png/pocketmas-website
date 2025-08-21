@@ -244,6 +244,8 @@ const Gallery = () => {
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+                title="Close modal"
+                aria-label="Close modal"
               >
                 <X className="w-8 h-8" />
               </button>

@@ -186,6 +186,8 @@ const ScanDisplay = () => {
                       <button
                         onClick={() => removeImage(index)}
                         className="p-1 text-red-500 hover:text-red-700 transition-colors"
+                        title={`Remove Artwork ${index + 1}`}
+                        aria-label={`Remove Artwork ${index + 1}`}
                       >
                         <X className="w-4 h-4" />
                       </button>
@@ -231,12 +233,16 @@ const ScanDisplay = () => {
                         <button
                           onClick={prevImage}
                           className="p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
+                          title="Previous Artwork"
+                          aria-label="Previous Artwork"
                         >
                           <SkipBack className="w-5 h-5" />
                         </button>
                         <button
                           onClick={nextImage}
                           className="p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
+                          title="Next Artwork"
+                          aria-label="Next Artwork"
                         >
                           <SkipForward className="w-5 h-5" />
                         </button>
@@ -255,6 +261,8 @@ const ScanDisplay = () => {
                               ? 'bg-blue-600'
                               : 'bg-gray-300 hover:bg-gray-400'
                           }`}
+                          title={`Go to artwork ${index + 1}`}
+                          aria-label={`Go to artwork ${index + 1}`}
                         />
                       ))}
                     </div>

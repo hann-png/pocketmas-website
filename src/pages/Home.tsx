@@ -27,10 +27,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)'
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat home-hero-bg"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-transparent to-red-900/70" />
         
@@ -74,7 +71,7 @@ const Home = () => {
             </div>
             
             <div className="mt-8 text-white/80">
-              <p className="text-lg font-medium">📅 27 August 2024 • 🕐 10:00 AM - 6:00 PM • 📍 In-person sales only</p>
+              <p className="text-lg font-medium">📅 27 August 2025 • 🕐 10:00 AM - 5:00 PM • 📍 In-person sales only</p>
             </div>
           </div>
         </div>

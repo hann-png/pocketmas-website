@@ -52,8 +52,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-800 mb-4">Event Details</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>📅 27 August 2024</li>
-              <li>🕐 10:00 AM - 6:00 PM</li>
+              <li>📅 27 August 2025</li>
+              <li>🕐 10:00 AM - 5:00 PM</li>
               <li>📍 In-person sales only</li>
               <li>🎨 DIY Art Display</li>
             </ul>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-gray-600">
-          <p>&copy; 2024 POCKETMAS. All rights reserved. Celebrating Malaysia's Independence Day.</p>
+          <p>&copy; 2025 POCKETMAS. All rights reserved. Celebrating Malaysia's Independence Day.</p>
         </div>
       </div>
     </footer>
