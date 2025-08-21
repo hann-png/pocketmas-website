@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Star } from 'lucide-react'
+import logo from 'pocketmas-website\src\assets\logo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,9 +24,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-red-600 rounded-lg flex items-center justify-center">
-              <Star className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={logo}
+              alt="POCKETMAS Logo"
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
               POCKETMAS
             </span>
