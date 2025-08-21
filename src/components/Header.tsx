@@ -26,7 +26,7 @@ const Header = () => {
             <img
               src={logo}
               alt="POCKETMAS Logo"
-              className="h-48 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           </Link>
 
