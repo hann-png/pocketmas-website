@@ -7,7 +7,6 @@ import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail'
 import ScanDisplay from './pages/ScanDisplay'
 import EventInfo from './pages/EventInfo'
-import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import CountdownBanner from './components/CountdownBanner'
 
@@ -29,7 +28,6 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/scan-display" element={<ScanDisplay />} />
             <Route path="/event-info" element={<EventInfo />} />
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

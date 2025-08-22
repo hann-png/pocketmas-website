@@ -11,7 +11,6 @@ const Header = () => {
     { name: 'Products', href: '/products' },
     { name: 'Scan & Display', href: '/scan-display' },
     { name: 'Event Info', href: '/event-info' },
-    { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ]
 
