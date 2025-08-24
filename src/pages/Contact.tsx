@@ -178,7 +178,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Business Hours</h3>
-                    <p className="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600">Mon - Fri: 9:00 AM - 5:00 PM</p>
                     <p className="text-sm text-gray-500">Malaysian Standard Time (MST)</p>
                   </div>
                 </div>
