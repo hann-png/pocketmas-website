@@ -7,84 +7,91 @@ const Products = () => {
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'keychains', name: 'Acrylic Keychains' },
+    { id: 'keychains', name: 'Keychains' },
     { id: 'postcards', name: 'Postcards' },
-    { id: 'diy-art', name: 'DIY Art' }
   ]
 
   const products = [
     {
       id: 1,
-      name: 'Jalur Gemilang Keychain',
+      name: 'Chinese Cat',
       category: 'keychains',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 15 - 25',
-      description: 'Premium acrylic keychain featuring the Malaysian flag design'
+      image: 'https://i.postimg.cc/vm3tXTXj/chinese-cat.jpg',
+      price: 'RM 5.90',
+      description: 'A charming cat in traditional Chinese attire, a tiny keepsake of culture and luck.'
     },
     {
       id: 2,
-      name: 'Petronas Twin Towers Keychain',
+      name: 'Malay Cat',
       category: 'keychains',
-      image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 18 - 28',
-      description: 'Iconic twin towers silhouette in premium acrylic'
+      image: 'https://i.postimg.cc/0Q4dR4T0/malay-cat.jpg',
+      price: 'RM 5.90',
+      description: 'A playful cat in traditional Malay attire, symbolizing joy and cultural heritage.'
     },
     {
       id: 3,
-      name: 'Hibiscus Flower Keychain',
+      name: 'Indian Cat',
       category: 'keychains',
-      image: 'https://images.unsplash.com/photo-1597149960419-0d90ac2e3db4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 12 - 22',
-      description: 'Beautiful hibiscus design representing Malaysia\'s national flower'
+      image: 'https://i.postimg.cc/xjkBJV1Y/indian-cat.jpg',
+      price: 'RM 5.90',
+      description: 'A graceful cat in traditional Indian attire, embodying elegance and cultural richness.'
     },
-    {
+        {
       id: 4,
-      name: 'Merdeka Heritage Postcard Set',
-      category: 'postcards',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 8 - 15',
-      description: 'Set of 5 postcards featuring Malaysian historical landmarks'
+      name: 'Iban Cat',
+      category: 'keychains',
+      image: 'https://i.postimg.cc/yxShVPB4/iban-cat.jpg',
+      price: 'RM 5.90',
+      description: 'A charming cat in traditional Iban attire, representing the rich cultural heritage of the Iban people.'
     },
-    {
+        {
       id: 5,
-      name: 'Cultural Diversity Postcards',
-      category: 'postcards',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 10 - 18',
-      description: 'Celebrating Malaysia\'s multicultural heritage'
+      name: 'Nyonya Cat',
+      category: 'keychains',
+      image: 'https://i.postimg.cc/7b83b2YC/nyonya-cat.jpg',
+      price: 'RM 5.90',
+      description: 'A beautiful cat in traditional Nyonya attire, showcasing the rich cultural heritage of the Peranakan community.'
     },
     {
       id: 6,
-      name: 'Traditional Food Postcards',
+      name: 'Masjid Jamek',
       category: 'postcards',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 6 - 12',
-      description: 'Delicious Malaysian cuisine illustrations'
+      image: 'https://i.postimg.cc/ZRs91Szw/Masjid-Jamek.jpg',
+      price: 'RM 12',
+      description: 'Masjid Jamek, where graceful domes and minarets meet the heart of Kuala Lumpur’s history.'
     },
     {
       id: 7,
-      name: 'Paint Your Malaysia Canvas',
-      category: 'diy-art',
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 25 - 45',
-      description: 'DIY canvas kit with Malaysian themes and QR display feature'
+      name: 'Kuala Lumpur Skyline',
+      category: 'postcards',
+      image: 'https://i.postimg.cc/jq9wctX5/Kuala-Lumpur-Skyline.jpg',
+      price: 'RM 12',
+      description: 'Kuala Lumpur’s skyline with twin towers and shining spires rising above a city where culture and modern dreams meet.'
     },
     {
       id: 8,
-      name: 'Batik Pattern Art Kit',
-      category: 'diy-art',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 30 - 50',
-      description: 'Create your own batik-inspired artwork with guided templates'
+      name: 'Bunga Raya',
+      category: 'postcards',
+      image: 'https://i.postimg.cc/x8WX13CH/Bunga-Raya.jpg',
+      price: 'RM 12',
+      description: 'The vibrant bunga raya, a symbol of courage and Malaysia’s beauty in full bloom.'
     },
     {
       id: 9,
-      name: 'Malaysian Wildlife Coloring Set',
-      category: 'diy-art',
-      image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      price: 'RM 20 - 35',
-      description: 'Educational coloring set featuring Malaysian animals'
-    }
+      name: 'Melacca Batik',
+      category: 'postcards',
+      image: 'https://i.postimg.cc/dty7SpH9/Melacca-Batik-Art.jpg',
+      price: 'RM 12',
+      description: 'Melacca Batik, a beautiful representation of traditional Malaysian art.'
+    },
+    {
+      id: 10,
+      name: 'Petaling Street',
+      category: 'postcards',
+      image: 'https://i.postimg.cc/FzffvB9N/Petaling-Street.jpg',
+      price: 'RM 12',
+      description: 'Petaling Street, a vibrant maze of colors, flavors, and the heartbeat of Kuala Lumpur’s culture.'
+    },
   ]
 
   const filteredProducts = selectedCategory === 'all' 
@@ -100,7 +107,7 @@ const Products = () => {
             Our Products
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our exclusive Merdeka Day collection featuring handcrafted keychains, beautiful postcards, and interactive DIY art pieces
+            Discover our exclusive Merdeka Day collection featuring handcrafted keychains and beautiful postcards
           </p>
         </div>
 

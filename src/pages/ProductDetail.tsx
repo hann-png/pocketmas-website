@@ -9,18 +9,16 @@ const ProductDetail = () => {
   // Mock product data - in real app, this would come from an API
   const product = {
     id: parseInt(id || '1'),
-    name: 'Jalur Gemilang Keychain',
+    name: 'Chinese Cat',
     category: 'Acrylic Keychains',
     images: [
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1597149960419-0d90ac2e3db4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://i.postimg.cc/vm3tXTXj/chinese-cat.jpg'
     ],
-    priceRange: 'RM 15 - 25',
-    description: 'Celebrate Malaysia\'s independence with our premium Jalur Gemilang keychain. Crafted from high-quality acrylic with vibrant colors that capture the essence of our national flag. Perfect for Merdeka Day celebrations and as a patriotic accessory.',
-    longDescription: 'This exclusive keychain features the iconic Malaysian flag design with meticulous attention to detail. Each piece is carefully crafted using premium acrylic materials that ensure durability and long-lasting color vibrancy. The design incorporates the traditional red, white, blue, and yellow colors of the Jalur Gemilang, making it a perfect symbol of Malaysian pride.',
-    materials: ['Premium Acrylic', 'Stainless Steel Ring', 'UV-Resistant Coating'],
-    sizes: ['Small (3cm x 2cm)', 'Medium (4cm x 3cm)', 'Large (5cm x 4cm)'],
+    priceRange: 'RM 5.90',
+    description: 'A charming cat in traditional Chinese attire, a tiny keepsake of culture and luck.',
+    longDescription: 'This adorable cat keychain is dressed in traditional Chinese attire, blending cuteness with cultural heritage. Symbolizing luck and festivity, it makes a charming keepsake that celebrates the beauty of tradition in a playful way.',
+    materials: ['Premium Acrylic', 'Stainless Steel Ring',],
+    size: ['(Approx.) 5cm x 5cm'],
     care: [
       'Clean with soft, damp cloth',
       'Avoid harsh chemicals',
@@ -28,7 +26,7 @@ const ProductDetail = () => {
       'Handle with care to prevent scratches'
     ],
     features: [
-      'Vibrant, fade-resistant colors',
+      'Vibrant colours',
       'Lightweight and durable',
       'Smooth, polished finish',
       'Patriotic Malaysian design',
@@ -155,7 +153,7 @@ const ProductDetail = () => {
           <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-6 border border-white/30">
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Available Sizes</h3>
             <ul className="space-y-2">
-              {product.sizes.map((size, index) => (
+              {product.size.map((size, index) => (
                 <li key={index} className="text-gray-600">• {size}</li>
               ))}
             </ul>
@@ -187,7 +185,7 @@ const ProductDetail = () => {
               Available at Our Merdeka Day Event
             </h3>
             <p className="text-gray-600 mb-6">
-              Visit us on 27 August 2024 for exclusive in-person shopping experience
+              Visit us on 27 August 2025 for exclusive in-person shopping experience
             </p>
             <Link
               to="/event-info"
