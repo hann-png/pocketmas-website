@@ -85,10 +85,10 @@ const ScanDisplay = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Scan & Display
+            DIY Art Session
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Scan QR codes from your DIY artworks to display them on the big screen, or manually add image URLs for a beautiful slideshow experience
+            Your DIY artworks will be displayed on the big screen after it is scanned and uploaded by us on that day.
           </p>
         </div>
 

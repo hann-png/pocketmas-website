@@ -1,37 +1,37 @@
 import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Star, Package, Palette, Shield, Heart } from 'lucide-react'
+import { getProductWithSpecs } from '../data/productData'
 
 const ProductDetail = () => {
   const { id } = useParams()
   const [selectedImage, setSelectedImage] = useState(0)
 
-  // Mock product data - in real app, this would come from an API
-  const product = {
-    id: parseInt(id || '1'),
-    name: 'Chinese Cat',
-    category: 'Acrylic Keychains',
-    images: [
-      'https://i.postimg.cc/vm3tXTXj/chinese-cat.jpg'
-    ],
-    priceRange: 'RM 5.90',
-    description: 'A charming cat in traditional Chinese attire, a tiny keepsake of culture and luck.',
-    longDescription: 'This adorable cat keychain is dressed in traditional Chinese attire, blending cuteness with cultural heritage. Symbolizing luck and festivity, it makes a charming keepsake that celebrates the beauty of tradition in a playful way.',
-    materials: ['Premium Acrylic', 'Stainless Steel Ring',],
-    size: ['(Approx.) 5cm x 5cm'],
-    care: [
-      'Clean with soft, damp cloth',
-      'Avoid harsh chemicals',
-      'Store in dry place',
-      'Handle with care to prevent scratches'
-    ],
-    features: [
-      'Vibrant colours',
-      'Lightweight and durable',
-      'Smooth, polished finish',
-      'Patriotic Malaysian design',
-      'Perfect gift for Merdeka Day'
-    ]
+  const product = getProductWithSpecs(parseInt(id || '1'))
+
+  if (!product) {
+    return (
+      <div className="min-h-screen py-20 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">Product Not Found</h1>
+          <Link
+            to="/products"
+            className="text-blue-600 hover:text-blue-700"
+          >
+            Back to Products
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  const getCategoryDisplayName = (category: string) => {
+    const categoryMap: { [key: string]: string } = {
+      'keychains': 'Acrylic Keychains',
+      'postcards': 'Postcards',
+      'diy-art': 'DIY Art'
+    }
+    return categoryMap[category] || category
   }
 
   return (
@@ -82,7 +82,7 @@ const ProductDetail = () => {
             <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-8 border border-white/30">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-100/50 text-blue-700 rounded-full text-sm font-medium">
-                  {product.category}
+                  {getCategoryDisplayName(product.category)}
                 </span>
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
@@ -96,7 +96,7 @@ const ProductDetail = () => {
               </h1>
 
               <p className="text-2xl font-bold text-blue-600 mb-6">
-                {product.priceRange}
+                {product.price}
               </p>
 
               <p className="text-gray-600 mb-6">

@@ -45,7 +45,7 @@ const Footer = () => {
               <li>📅 27 August 2025</li>
               <li>🕐 10:00 AM - 5:00 PM</li>
               <li>📍 In-person sales only</li>
-              <li>🎨 DIY Art Display</li>
+              <li>🎨 DIY Art</li>
             </ul>
           </div>
         </div>

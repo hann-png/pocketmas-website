@@ -39,17 +39,17 @@ const Home = () => {
           <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
             <div className="flex justify-center mb-6">
               <img 
-                src="https://cdn.chatandbuild.com/users/687607293c9390e9ca560a44/pocketmaslogotr-1755799628792-290722501.png" 
+                src="https://i.postimg.cc/767MNN1k/pocketmaslogotr.png" 
                 alt="Pocket Mas Logo" 
                 className="h-20 md:h-24 w-auto object-contain"
               />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
               <span className="text-2xl md:text-4xl">Merdeka Day Specials</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+
+            <p className="text-xl md:text-2xl text-black/90 mb-8 max-w-3xl mx-auto">
               Celebrate Malaysia's Independence Day with our exclusive collection of handcrafted keychains, postcards, and DIY art pieces.
             </p>
             
@@ -64,14 +64,14 @@ const Home = () => {
               
               <Link
                 to="/event-info"
-                className="inline-flex items-center px-8 py-4 backdrop-blur-lg bg-white/20 text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 backdrop-blur-lg bg-white/20 text-black font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-200"
               >
                 <Calendar className="mr-2 w-5 h-5" />
                 Event Details
               </Link>
             </div>
-            
-            <div className="mt-8 text-white/80">
+
+            <div className="mt-8 text-black/80">
               <p className="text-lg font-medium">📅 27 August 2025 • 🕐 10:00 AM - 5:00 PM • 📍 In-person sales only</p>
             </div>
           </div>

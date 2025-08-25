@@ -115,7 +115,7 @@ const EventInfo = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-3">DIY Art Display</h3>
             <p className="text-gray-600">
-              Experience our interactive "Scan & Display" feature where your DIY artworks can be showcased on large screens for everyone to admire.
+              Experience our interactive "DIY Art Session" feature where your DIY artworks can be showcased on large screens for everyone to admire.
             </p>
           </div>
 

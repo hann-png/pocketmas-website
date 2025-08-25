@@ -1,98 +1,19 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Eye, Filter } from 'lucide-react'
+import { getProductsForDisplay } from '../data/productData'
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'keychains', name: 'Keychains' },
+    { id: 'keychains', name: 'Acrylic Keychains' },
     { id: 'postcards', name: 'Postcards' },
+    { id: 'diy-art', name: 'DIY Art' }
   ]
 
-  const products = [
-    {
-      id: 1,
-      name: 'Chinese Cat',
-      category: 'keychains',
-      image: 'https://i.postimg.cc/vm3tXTXj/chinese-cat.jpg',
-      price: 'RM 5.90',
-      description: 'A charming cat in traditional Chinese attire, a tiny keepsake of culture and luck.'
-    },
-    {
-      id: 2,
-      name: 'Malay Cat',
-      category: 'keychains',
-      image: 'https://i.postimg.cc/0Q4dR4T0/malay-cat.jpg',
-      price: 'RM 5.90',
-      description: 'A playful cat in traditional Malay attire, symbolizing joy and cultural heritage.'
-    },
-    {
-      id: 3,
-      name: 'Indian Cat',
-      category: 'keychains',
-      image: 'https://i.postimg.cc/xjkBJV1Y/indian-cat.jpg',
-      price: 'RM 5.90',
-      description: 'A graceful cat in traditional Indian attire, embodying elegance and cultural richness.'
-    },
-        {
-      id: 4,
-      name: 'Iban Cat',
-      category: 'keychains',
-      image: 'https://i.postimg.cc/yxShVPB4/iban-cat.jpg',
-      price: 'RM 5.90',
-      description: 'A charming cat in traditional Iban attire, representing the rich cultural heritage of the Iban people.'
-    },
-        {
-      id: 5,
-      name: 'Nyonya Cat',
-      category: 'keychains',
-      image: 'https://i.postimg.cc/7b83b2YC/nyonya-cat.jpg',
-      price: 'RM 5.90',
-      description: 'A beautiful cat in traditional Nyonya attire, showcasing the rich cultural heritage of the Peranakan community.'
-    },
-    {
-      id: 6,
-      name: 'Masjid Jamek',
-      category: 'postcards',
-      image: 'https://i.postimg.cc/ZRs91Szw/Masjid-Jamek.jpg',
-      price: 'RM 12',
-      description: 'Masjid Jamek, where graceful domes and minarets meet the heart of Kuala Lumpur’s history.'
-    },
-    {
-      id: 7,
-      name: 'Kuala Lumpur Skyline',
-      category: 'postcards',
-      image: 'https://i.postimg.cc/jq9wctX5/Kuala-Lumpur-Skyline.jpg',
-      price: 'RM 12',
-      description: 'Kuala Lumpur’s skyline with twin towers and shining spires rising above a city where culture and modern dreams meet.'
-    },
-    {
-      id: 8,
-      name: 'Bunga Raya',
-      category: 'postcards',
-      image: 'https://i.postimg.cc/x8WX13CH/Bunga-Raya.jpg',
-      price: 'RM 12',
-      description: 'The vibrant bunga raya, a symbol of courage and Malaysia’s beauty in full bloom.'
-    },
-    {
-      id: 9,
-      name: 'Melacca Batik',
-      category: 'postcards',
-      image: 'https://i.postimg.cc/dty7SpH9/Melacca-Batik-Art.jpg',
-      price: 'RM 12',
-      description: 'Melacca Batik, a beautiful representation of traditional Malaysian art.'
-    },
-    {
-      id: 10,
-      name: 'Petaling Street',
-      category: 'postcards',
-      image: 'https://i.postimg.cc/FzffvB9N/Petaling-Street.jpg',
-      price: 'RM 12',
-      description: 'Petaling Street, a vibrant maze of colors, flavors, and the heartbeat of Kuala Lumpur’s culture.'
-    },
-  ]
+  const products = getProductsForDisplay()
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
@@ -107,7 +28,7 @@ const Products = () => {
             Our Products
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our exclusive Merdeka Day collection featuring handcrafted keychains and beautiful postcards
+            Discover our exclusive Merdeka Day collection featuring handcrafted keychains, beautiful postcards, and interactive DIY art
           </p>
         </div>
 
