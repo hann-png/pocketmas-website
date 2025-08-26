@@ -22,31 +22,61 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // 🔹 Replace with your Google Form action URL (must end with /formResponse)
-    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdpe_LQZINfbW7DZr4pHgU8PVh6lhMNP0z-mG5-SzRt9hsVAQ/formResponse"
-
-    // 🔹 Map your Google Form entry IDs here
-    const formDataToSend = new FormData()
-    formDataToSend.append("entry.2005620554", formData.name)     // Name
-    formDataToSend.append("entry.1045781291", formData.email)    // Email
-    formDataToSend.append("entry.839337160", formData.message)   // Message
-
     try {
-      await fetch(formUrl, {
-        method: "POST",
-        body: formDataToSend,
-        mode: "no-cors"
-      })
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdpe_LQZINfbW7DZr4pHgU8PVh6lhMNP0z-mG5-SzRt9hsVAQ/formResponse"
+      
+      // Create hidden iframe method - works better on Vercel
+      const iframe = document.createElement('iframe')
+      iframe.name = 'hidden_iframe'
+      iframe.style.display = 'none'
+      document.body.appendChild(iframe)
 
+      // Create form element
+      const form = document.createElement('form')
+      form.action = formUrl
+      form.method = 'POST'
+      form.target = 'hidden_iframe'
+
+      // Add form fields
+      const nameInput = document.createElement('input')
+      nameInput.name = 'entry.2005620554'  // Your name entry ID
+      nameInput.value = formData.name
+      form.appendChild(nameInput)
+
+      const emailInput = document.createElement('input')
+      emailInput.name = 'entry.1045781291'  // Your email entry ID
+      emailInput.value = formData.email
+      form.appendChild(emailInput)
+
+      const messageInput = document.createElement('input')
+      messageInput.name = 'entry.839337160'  // Your message entry ID
+      messageInput.value = formData.message
+      form.appendChild(messageInput)
+
+      // Submit form
+      document.body.appendChild(form)
+      form.submit()
+
+      // Clean up after submission
+      setTimeout(() => {
+        if (document.body.contains(form)) {
+          document.body.removeChild(form)
+        }
+        if (document.body.contains(iframe)) {
+          document.body.removeChild(iframe)
+        }
+      }, 1000)
+
+      // Show success message
       setIsSubmitting(false)
       setIsSubmitted(true)
       setFormData({ name: "", email: "", message: "" })
-
-      // Reset success message after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000)
+
     } catch (error) {
       console.error("Form submission error:", error)
       setIsSubmitting(false)
+      alert("There was an error sending your message. Please try again.")
     }
   }
 
