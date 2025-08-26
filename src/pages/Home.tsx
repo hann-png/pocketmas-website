@@ -17,7 +17,7 @@ const Home = () => {
     {
       icon: <Palette className="w-8 h-8" />,
       title: 'DIY Art',
-      description: 'Interactive art pieces you can customize and display'
+      description: 'Design your art piece and display it'
     }
   ]
 

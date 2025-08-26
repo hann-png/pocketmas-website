@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {SiInstagram, SiFacebook, SiX } from 'react-icons/si'
 import {Star, Mail} from "lucide-react"
 import logo from "../assets/logo.png"
+import ScrollToTopLink from './ScrollToTopLink'
 
 const Footer = () => {
   return (
@@ -11,13 +12,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
            <div className="col-span-1 md:col-span-2">
-          <Link to="/" className="flex item-center mb-4">
+          <ScrollToTopLink to="/" className="flex item-center mb-4">
             <img
               src={logo}
               alt="POCKETMAS Logo"
               className="h-12 w-auto object-contain"
             />
-          </Link>
+          </ScrollToTopLink>
             <p className="text-gray-600 max-w-md">
               Celebrating Malaysia's independence with exclusive handcrafted keychains, postcards, and DIY art collections. Join us for our special in-person event on 27 August.
             </p>
@@ -32,9 +33,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-800 mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/products" className="text-gray-600 hover:text-blue-600 transition-colors">Products</Link></li>
-              <li><Link to="/event-info" className="text-gray-600 hover:text-blue-600 transition-colors">Event Info</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</Link></li>
+              <li><ScrollToTopLink to="/products" className="text-gray-600 hover:text-blue-600 transition-colors">Products</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/event-info" className="text-gray-600 hover:text-blue-600 transition-colors">Event Info</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</ScrollToTopLink></li>
+              <li><ScrollToTopLink to="/scan-display" className="text-gray-600 hover:text-blue-600 transition-colors">DIY Art</ScrollToTopLink></li>
             </ul>
           </div>
 

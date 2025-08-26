@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Star } from 'lucide-react'
+import { Menu, X, Star, Scroll } from 'lucide-react'
 import logo from "../assets/logo.png"
+import ScrollToTopLink from './ScrollToTopLink'
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
@@ -21,18 +23,18 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <ScrollToTopLink to="/" className="flex items-center space-x-2">
             <img
               src={logo}
               alt="POCKETMAS Logo"
               className="h-10 w-auto object-contain"
             />
-          </Link>
+          </ScrollToTopLink>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <Link
+              <ScrollToTopLink
                 key={item.name}
                 to={item.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -42,7 +44,7 @@ const Header = () => {
                 }`}
               >
                 {item.name}
-              </Link>
+              </ScrollToTopLink>
             ))}
           </nav>
 
@@ -60,7 +62,7 @@ const Header = () => {
           <div className="md:hidden absolute top-16 left-0 right-0 bg-white/90 backdrop-blur-lg border-b border-white/20">
             <nav className="px-4 py-4 space-y-2">
               {navigation.map((item) => (
-                <Link
+                <ScrollToTopLink
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
@@ -71,7 +73,7 @@ const Header = () => {
                   }`}
                 >
                   {item.name}
-                </Link>
+                </ScrollToTopLink>
               ))}
             </nav>
           </div>
