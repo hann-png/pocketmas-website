@@ -21,16 +21,33 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: '', email: '', message: '' })
-    
-    // Reset success message after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+
+    // 🔹 Replace with your Google Form action URL (must end with /formResponse)
+    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdpe_LQZINfbW7DZr4pHgU8PVh6lhMNP0z-mG5-SzRt9hsVAQ/formResponse"
+
+    // 🔹 Map your Google Form entry IDs here
+    const formDataToSend = new FormData()
+    formDataToSend.append("entry.2005620554", formData.name)     // Name
+    formDataToSend.append("entry.1045781291", formData.email)    // Email
+    formDataToSend.append("entry.839337160", formData.message)   // Message
+
+    try {
+      await fetch(formUrl, {
+        method: "POST",
+        body: formDataToSend,
+        mode: "no-cors"
+      })
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", message: "" })
+
+      // Reset success message after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -50,7 +67,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="backdrop-blur-lg bg-white/20 rounded-2xl p-8 border border-white/30">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h2>
-            
+
             {isSubmitted && (
               <div className="mb-6 p-4 bg-green-100/50 border border-green-200/50 rounded-xl">
                 <p className="text-green-700 font-medium">
@@ -112,8 +129,8 @@ const Contact = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full flex items-center justify-center px-6 py-4 bg-gradient-to-r from-blue-600 to-red-600 text-white font-semibold rounded-xl transition-all duration-200 ${
-                  isSubmitting 
-                    ? 'opacity-70 cursor-not-allowed' 
+                  isSubmitting
+                    ? 'opacity-70 cursor-not-allowed'
                     : 'hover:from-blue-700 hover:to-red-700 hover:shadow-lg hover:transform hover:-translate-y-1'
                 }`}
               >
