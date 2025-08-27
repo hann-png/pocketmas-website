@@ -19,14 +19,15 @@ export const categorySpecs = {
   },
   postcards: {
     features: [
-      'High-quality matte finish',
+      'High-quality colouring',
       'Vibrant color printing',
       'Standard postcard size',
       'Malaysian cultural themes',
-      'Collectible series design'
+      'Collectible series design',
+      'Original printed postcards'
     ],
-    materials: ['Premium Cardstock (300gsm)', 'Eco-friendly Ink', 'Matte Lamination'],
-    size: ['Standard (10cm x 15cm)', 'Large (15cm x 21cm)'],
+    materials: ['Glossy postcards', 'Bright Ink', 'Matte Lamination'],
+    size: ['10.5cm x 14.8cm'],
     care: [
       'Keep away from direct sunlight',
       'Store in protective sleeves',
