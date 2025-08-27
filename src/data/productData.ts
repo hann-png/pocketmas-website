@@ -9,7 +9,7 @@ export const categorySpecs = {
       'Perfect gift for Merdeka Day'
     ],
     materials: ['Premium Acrylic', 'Stainless Steel Ring'],
-    size: ['(Approx.) 5cm x 5cm'],
+    size: ['4.1cm x 5.8cm'],
     care: [
       'Clean with soft, damp cloth',
       'Avoid harsh chemicals',
