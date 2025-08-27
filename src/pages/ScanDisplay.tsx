@@ -8,28 +8,28 @@ const ScanDisplay = () => {
       id: 1,
       title: "Find the DIY section",
       description: "Find the DIY section of our booth and get a seat at the table.",
-      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://i.postimg.cc/qq6MPXcv/booth.jpg",
       icon: <MapPin className="w-6 h-6" />
     },
     {
       id: 2,
       title: "Create Your Artwork",
       description: "There will be templates and colouring tools available so feel free to create your own patriotic designs.",
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://i.postimg.cc/q7QRy7M4/art.jpg",
       icon: <Palette className="w-6 h-6" />
     },
     {
       id: 3,
       title: "Upload your Artwork",
       description: "Locate the man in the photo and he will assist you in uploading your artwork.",
-      image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://i.postimg.cc/d1xVNSyf/Ian.jpg",
       icon: <Camera className="w-6 h-6" />
     },
     {
       id: 4,
       title: "Display on Big Screen",
       description: "Once your artwork is uploaded, it will be displayed on the big screen for everyone to see.",
-      image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://i.postimg.cc/qRR7Ldzn/display.jpg",
       icon: <Monitor className="w-6 h-6" />
     }
   ]
